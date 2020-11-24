@@ -3,8 +3,14 @@ html {
 }
 
 body {
+    background-color: #d6e2e7;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 * {
@@ -12,6 +18,11 @@ body {
 }
 
 .tictactoe {
+    background-color: #2884b9;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px #a3a3a3;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
 }
@@ -19,6 +30,7 @@ body {
 .tictactoe__row {
     display: flex;
 }
+
 
 .tictactoe__cell {
     border: 1px solid #ddd;
