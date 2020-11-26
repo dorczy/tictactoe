@@ -11,7 +11,7 @@
 }
 
 html {
-    font-size: 50px;
+    font-size: 25px;
 }
 
 body {
@@ -49,9 +49,10 @@ body {
     border: 1px solid var(--white);
     display: flex;
     flex-direction: column;
-    height: 1.5rem;
+    font-size: 2rem;
+    height: 2.5rem;
     justify-content: center;
-    width: 1.5rem;
+    width: 2.5rem;
 }
 
 .new-game {
@@ -63,8 +64,10 @@ body {
     display: flex;
     flex-direction: column;
     font-family: 'Comic Neue', cursive;
+    font-size: .8rem;
     font-weight: 600;
-    padding: .2rem;
+    padding: .5rem;
+
 }
 .new-game:hover {
     background-color: var(--main-darker-cell-color);
@@ -74,4 +77,5 @@ body {
     color: var(--white);
     font-weight: 600;
     text-shadow: 0px 0px 10px var(--main-cell-color);
+    font-size: 1.5rem;
 }
