@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap');
+
+:root {
+    --black: #000000;
+    --grey: #727272;
+    --light-grey: #a3a3a3;
+    --main-bg-color: #d1dbdd;
+    --main-cell-color: #528abb;
+    --main-darker-cell-color: #4376a3;
+    --white: #ffffff; 
+}
+
 html {
-    font-size: 24px;
+    font-size: 50px;
 }
 
 body {
-    background-color: #d6e2e7;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
+    align-items: center;
+    background-color: var(--main-bg-color);
     display: flex;
+    flex-direction: column;
+    font-family: 'Comic Neue', cursive;
     height: 100vh;
     justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    margin: 0;
 }
 
 * {
@@ -18,23 +30,48 @@ body {
 }
 
 .tictactoe {
-    background-color: #2884b9;
-    border: 1px solid #ffffff;
+    background-color: var(--main-cell-color);
+    border: 1px solid var(--white);
     border-radius: 5px;
-    box-shadow: 1px 1px 8px #a3a3a3;
-    color: #ffffff;
+    box-shadow: 1px 1px 8px var(--light-grey);
+    color: var(--white);
     display: flex;
     flex-direction: column;
+    font-weight: 800;
 }
 
 .tictactoe__row {
     display: flex;
 }
 
-
 .tictactoe__cell {
-    border: 1px solid #ddd;
-    height: 2rem;
-    padding: .5rem;
-    width: 2rem;
+    align-items: center;
+    border: 1px solid var(--white);
+    display: flex;
+    flex-direction: column;
+    height: 1.5rem;
+    justify-content: center;
+    width: 1.5rem;
+}
+
+.new-game {
+    background-color: var(--main-cell-color);
+    border: 1px solid var(--white);
+    border-radius: 5px;
+    box-shadow: 1px 1px 8px var(--light-grey);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Comic Neue', cursive;
+    font-weight: 600;
+    padding: .2rem;
+}
+.new-game:hover {
+    background-color: var(--main-darker-cell-color);
+}
+
+.winnerOutput {
+    color: var(--white);
+    font-weight: 600;
+    text-shadow: 0px 0px 10px var(--main-cell-color);
 }
