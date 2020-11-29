@@ -12,6 +12,7 @@ const startGame = () => {
 }
 
 const initState = () => {
+    stepCount = 0;
     matrix = Array(cols).fill(null).map(() => Array(rows).fill(null))
 }
 
@@ -27,6 +28,7 @@ const addClickListener = () => {
         increaseCounter();
         modifyCell(event.target);
         setMark();
+        setMessage(mark + ' lép!');
         changeMatrixValue(event.target);
         checkWinner();
     }
@@ -52,8 +54,12 @@ const addClickListener = () => {
 
         const checkWinner = () => {
             console.log(checkColumnValues(), checkDiagonalValues());
+            console.log(stepCount);
             if (checkValues(matrix) || checkColumnValues() || checkDiagonalValues()) {
                 endGame();
+            }
+            if (stepCount == 9)  {
+                drawGame()
             }
         }
 
@@ -76,6 +82,11 @@ const addClickListener = () => {
                 removeAllClickListener();
             }
 
+            const drawGame = () => {
+                setMessage('Döntetlen!');
+                removeAllClickListener();
+            }
+
                 const removeAllClickListener = () => {
                     document.querySelectorAll('.tictactoe__cell')
                         .forEach(element => {
@@ -86,14 +97,17 @@ const addClickListener = () => {
 
 
 const newGame = () => {
+    setMessage(mark + ' lép!');
     document
         .querySelector('.new-game')
         .addEventListener('click', () => {
             initState();
             addClickListener();
             deleteSigns();
-            setMessage('');
-            setMark()
+            // setMessage('');
+            console.log(mark);
+            setMark();
+            setMessage(mark + ' lép!');
         })
 }
 
